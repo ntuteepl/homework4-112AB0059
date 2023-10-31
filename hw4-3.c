@@ -55,10 +55,12 @@ while(scanf("%d%d",&s[n],&d[n])!=EOF){
     }
 
     for(int d=0;d<car;d++){
-        printf("driver %d's schedule is" ,d+1 );
+        printf("Driver %d's schedule is" ,d+1 );
         for(int f=0;f<n*2;f++){
             if(ssch[d][f]!=0){
                 printf("%d %d",ssch[d][f],dsch[d][f]);
+                if (f < n * 2 - 1 && ssch[d][f + 1] != 0)
+                printf(" ");
             }
             else{
                 printf("\n");
